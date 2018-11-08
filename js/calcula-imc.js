@@ -30,7 +30,8 @@ for (var i = 0; i < pacientes.length; i++) {
     if (!alturaEhValida) {
         console.log("altura inválida")
         alturaEhValida = false;
-        tdImc.textContent = "Altura invalida";        
+        tdImc.textContent = "Altura invalida";     
+        paciente.classList.add("paciente-invalido")   
     }
 
     if (alturaEhValida && pesoEhValido) {
@@ -39,6 +40,8 @@ for (var i = 0; i < pacientes.length; i++) {
         tdImc.textContent = imc;
     }
 }
+
+
 
 function validaPeso(peso) {
     return (peso >= 0 && peso < 1000) ? true : false;
